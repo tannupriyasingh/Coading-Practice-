@@ -21,7 +21,7 @@ def getNodeChild(node, tree):
 
 def countEvenNumberNodes(node, tree):
 	if isLeafNode(node, tree):
-		if (getNodeValue(node, tree)%2 == 0):
+		if (getNodeValue(node, tree) % 2 == 0):
 			return 1
 		return 0
 
@@ -29,7 +29,7 @@ def countEvenNumberNodes(node, tree):
 	for childNode in getNodeChild(node, tree):
 		evenNode += countEvenNumberNodes(childNode, tree)
 	
-	if(getNodeValue(node, tree)%2 == 0):
+	if(getNodeValue(node, tree) % 2 == 0):
 		evenNode += 1
 	return evenNode
 

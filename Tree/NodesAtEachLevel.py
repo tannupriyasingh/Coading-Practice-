@@ -33,6 +33,10 @@ def heightOfTree(node, tree):
 def nodesAtEachLevel(rangeHeight, node, tree):
 	curHeight = rangeHeight[0]
 	res = [0]*rangeHeight[1]
+
+	if isLeafNode(node, tree):
+		res[curHeight] = 1
+		return res
 	
 	childRangeHeight = (curHeight+1, rangeHeight[1])
 	for childNode in getNodeChild(node, tree):
